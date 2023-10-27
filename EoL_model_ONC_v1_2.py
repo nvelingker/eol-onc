@@ -117,7 +117,7 @@ def main(args):
             pickle.dump(gb_random, f, pickle.HIGHEST_PROTOCOL)
         with open('models/gb_args.p', 'wb') as f:
             pickle.dump(args, f, pickle.HIGHEST_PROTOCOL)
-
+    print('DONE!')
 
 
 if __name__ == '__main__':
@@ -128,3 +128,4 @@ if __name__ == '__main__':
     parser.add_argument('-m','--model-type', help='Model to fit {"rf", "gb"}', required=False)
     args = parser.parse_args()
     main(args)
+    
